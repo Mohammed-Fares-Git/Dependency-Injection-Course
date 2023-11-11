@@ -4,10 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import dagger.hilt.EntryPoint
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 private const val HILT_COURSE = "Hilt-Course"
-@EntryPoint
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     @Inject
@@ -17,11 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         Log.d(HILT_COURSE, name)
-
-
-
 
     }
 }

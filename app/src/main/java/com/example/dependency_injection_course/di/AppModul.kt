@@ -12,8 +12,14 @@ object AppModul {
 
     @Singleton
     @Provides
-    fun provideName (): String {
-        return "Mohammed Fares"
+    fun provideFirstName (): String {
+        return "Mohammed"
+    }
+
+    @Singleton
+    @Provides
+    fun provideLastName (): String {
+        return "Fares"
     }
 
 }

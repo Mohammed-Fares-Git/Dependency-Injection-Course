@@ -6,19 +6,21 @@ import android.util.Log
 import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
 
 private const val HILT_COURSE = "Hilt-Course"
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
+    @Inject lateinit var firstName: String
     @Inject
-    lateinit var name: String
+    @Named("lastName") lateinit var lastName: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.d(HILT_COURSE, name)
+        Log.d(HILT_COURSE, "Hi, Mr.$firstName $lastName")
 
     }
 }

@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
@@ -18,6 +19,7 @@ object AppModul {
 
     @Singleton
     @Provides
+    @Named("lastName")
     fun provideLastName (): String {
         return "Fares"
     }

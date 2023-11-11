@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Dependency_Injection_course</string>
+    <string name="firstName">Mohammed</string>
+    <string name="lastName">Fares</string>
 </resources>
